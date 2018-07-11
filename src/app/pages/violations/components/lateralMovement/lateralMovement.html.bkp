@@ -1,0 +1,93 @@
+<div class="widgets">
+  <div class="row">
+    <ba-card title="Policy Violations" baCardClass="with-scroll" class="data-table-container">
+      <div class="row">
+        <div class="col-sm-2">
+          <label class="label-control">Rows on page</label>
+          <select class="form-control input-sm" [(ngModel)]="rowsOnPage">
+            <option [ngValue]="5">5</option>
+            <option [ngValue]="10">10</option>
+            <option [ngValue]="15">15</option>
+          </select>
+        </div>
+        <div class="col-sm-4">
+          <div class="row">
+            <label class="col-sm-12 label-control">Sort by</label>
+          </div>
+          <div class="row">
+            <div class="offset-sm-1 col-sm-5">
+              <div class="row">
+                <select class="form-control input-sm" [(ngModel)]="sortBy">
+                  <option ngValue="date">Date</option>
+                  <option ngValue="accountName">Account Name</option>
+                  <option ngValue="policyName">Policy Name</option>
+                  <option ngValue="rawEvent">Raw Event</option>
+                </select>
+              </div>
+            </div>
+            <div class="offset-sm-1 col-sm-5">
+              <div class="row">
+                <select class="form-control input-sm" [(ngModel)]="sortOrder">
+                  <option ngValue="asc">Ascending</option>
+                  <option ngValue="desc">Descending</option>
+                  <option ngValue="badValue">Bad value</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">User information</div>
+
+        <table class="table table-striped" [mfData]="userProfiles | dataFilter : filterQuery" #mf="mfDataTable" [mfRowsOnPage]="rowsOnPage" [(mfSortBy)]="sortBy" [(mfSortOrder)]="sortOrder">
+          <thead>
+          <tr>
+            <th style="width: 5%"></th>
+            <th style="width: 5%">
+              <mfDefaultSorter by="date">Date</mfDefaultSorter>
+            </th>
+            <th style="width: 5%">
+              <mfDefaultSorter by="accountName">Account Name</mfDefaultSorter>
+            </th>
+            <th style="width: 15%">
+              <mfDefaultSorter by="policyName">Policy Name</mfDefaultSorter>
+            </th>
+            <th style="width: 70%">
+              <mfDefaultSorter by="rawEvent">Raw Event</mfDefaultSorter>
+            </th>
+          </tr>
+          <tr>
+            <th colspan="5">
+              Filter by name:
+              <input class="form-control" [(ngModel)]="filterQuery" />
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let item of mf.data ">
+            <!--<td>-->
+              <!--<button (click)="remove(item)" class="btn btn-danger">x</button>-->
+              <!--<button type="button" class="btn btn-default btn-icon" (click)="select(item)" [class.selected]="item === selectedUserProfile"><i class="fa fa-area-chart"></i></button>-->
+            <!--</td>-->
+            <ba-card class=accordion-panel  title="{{item.account_name}}">
+            <td>{{item.date1}}</td>
+            <td></td>
+            <td>{{item.policy_name | uppercase }}</td>
+            <td><pre class="result-toastr">{{item.raw_event}} | json</pre></td>
+            </ba-card>
+          </tr>
+          </tbody>
+          <tfoot>
+          <tr>
+            <td colspan="5">
+              <mfBootstrapPaginator [rowsOnPageSet]="[5,10,15]"></mfBootstrapPaginator>
+            </td>
+          </tr>
+          </tfoot>
+        </table>
+      </div>
+    </ba-card>
+    <user-profile [userProfile]="selectedUserProfile"></user-profile>
+  </div>
+</div>

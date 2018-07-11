@@ -1,0 +1,23 @@
+@import '../../../../theme/sass/conf/conf';
+:host /deep/ .widgets {
+  .data-table-container {
+    width: 100%;
+    .panel-heading {
+      margin-top: 25px;
+    }
+  }
+}
+
+.result-toastr {
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.33);
+  border: none;
+  margin-bottom: 5px;
+}
+
+#toast-container.toast-top-center, #toast-container.toast-bottom-center{
+  .toast{
+    margin-bottom: 5px;
+  }
+}

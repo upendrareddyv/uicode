@@ -1,0 +1,56 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title">{{modalHeader}}</h4>
+    <button class="close" aria-label="Close" (click)="closeModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-content">
+    <section class="chartist">
+      <div>
+
+        <ba-card title="chart.lines" baCardClass="with-scroll">
+          <h5 translate>{{'chart.simple_line_chart'}}</h5>
+          <ba-chartist-chart baChartistChartClass="ct-chart"
+                             baChartistChartType="Line"
+                             [baChartistChartData]="chart_data['simpleLineData']"
+                             [baChartistChartOptions]="chart_data['simpleLineOptions']">
+          </ba-chartist-chart>
+        </ba-card>
+
+      </div>
+    </section>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="page-header">
+        <h1>Timeline</h1>
+      </div>
+      <div style="display:inline-block;width:100%;overflow-y:auto;">
+        <!--<input [(ngModel)]="filterargs" type="text" />-->
+        <ul class="timeline timeline-horizontal">
+
+          <li class="timeline-item" *ngFor="let item of data | search:filterargs ">
+            <div class="timeline-badge primary"><i class="glyphicon glyphicon-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="timeline-title">{{item.policy_name}}</h4>
+                <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>{{item.date1}} {{item.time1}}</small></p>
+              </div>
+              <div class="timeline-body">
+                <p></p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal-footer">
+    <button class="btn btn-primary confirm-btn" (click)="closeModal()">Close</button>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="modal-content" xmlns="http://www.w3.org/1999/html">
+  <div class="modal-header">
+    <h4 class="modal-title">Behavior Profile [{{modalHeader}}]</h4>
+    <button class="close" aria-label="Close" (click)="closeModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <section class="chartist">
+      <div style="background-color: #18394e">
+        <ba-card title="Chart" baCardClass="with-scroll">
+          <ba-chartist-chart baChartistChartClass="ct-chart"
+                             baChartistChartType="Line"
+                             [baChartistChartData]="chart_data['simpleLineData']"
+                             [baChartistChartOptions]="chart_data['simpleLineOptions']">
+          </ba-chartist-chart>
+        </ba-card>
+      </div>
+    </section>
+    <div style="background-color: #18394e">
+      <ba-card title="Timeline" >
+        <div style="display:inline-block;width:100%;overflow-y:auto;">
+
+          <!--<input [(ngModel)]="filterargs" type="text" />-->
+          <ul class="timeline timeline-horizontal">
+
+            <li class="timeline-item" *ngFor="let item of data | search:filterargs ">
+              <div class="timeline-badge primary"><i class="glyphicon glyphicon-check"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="timeline-title" style="color: #00abff">{{item.policy_name}}</h4>
+                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>{{item.date1}} {{item.time1}}</small></p>
+                </div>
+                <div class="timeline-body">
+                  <p></p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </ba-card>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary confirm-btn" (click)="closeModal()">Close</button>
+  </div>
+</div>

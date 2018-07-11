@@ -1,0 +1,36 @@
+@import "../../../../theme/sass/conf/conf";
+:host /deep/.threat-details-cont {
+    //color: $content-text;
+    .card-header {
+        font-weight: bold;
+    }
+    .side-cont {
+        padding: 10px;
+        text-align: center;
+        border-right: 1px solid #ccc;
+        background-color: $cyber-white;
+        color: $cyber-black;
+        border-radius: 5px 0 0 5px;
+    }
+    .info-cont {
+        padding: 10px;
+        background-color: $cyber-white;
+        color: $cyber-black;
+        border-radius: 0 5px 5px 0;
+    }
+    .model-heading {
+        height: 100px;
+        .threat-stage {
+            width: 33%;
+            float: left;
+        }
+    }
+    .model-indicator {
+        height: 200px;
+        .stage-info {
+            float: left;
+            width: 33%;
+            text-align: center;
+        }
+    }
+}
