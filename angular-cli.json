@@ -9,7 +9,6 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "amcharts",
         "favicon.ico"
       ],
       "index": "index.html",
@@ -44,7 +43,7 @@
         "../node_modules/chroma-js/chroma.js",
         "../node_modules/amcharts3/amcharts/amcharts.js",
         "../node_modules/amcharts3/amcharts/serial.js",
-        "../node_modules/amcharts3/amcharts/amstock.js",
+        "../node_modules/amstock3/amcharts/amstock.js",
         "../node_modules/amcharts3/amcharts/plugins/export/export.min.js",
         "../node_modules/amcharts3/amcharts/plugins/responsive/responsive.min.js",
         "../node_modules/amcharts3/amcharts/plugins/animate/animate.min.js",
@@ -72,13 +71,16 @@
   },
   "lint": [
     {
-      "project": "src/tsconfig.app.json"
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**/*"
     },
     {
-      "project": "src/tsconfig.spec.json"
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**/*"
     },
     {
-      "project": "e2e/tsconfig.e2e.json"
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**/*"
     }
   ],
   "test": {

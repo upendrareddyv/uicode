@@ -1,7 +1,7 @@
-import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
-import {BaThemeConfigProvider} from '../../../../theme';
+import { Injectable } from '@angular/core';
+import { BaThemeConfigProvider } from '../../../../theme';
 import 'rxjs/add/operator/map';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class MaliciousFileService {
@@ -21939,7 +21939,7 @@ export class MaliciousFileService {
   }]
 
 
-  constructor(private http: Http, private _baConfig: BaThemeConfigProvider) {
+  constructor(private http: HttpClient, private _baConfig: BaThemeConfigProvider) {
   }
 
   // Get all posts from the API

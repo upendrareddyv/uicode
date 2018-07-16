@@ -1,5 +1,6 @@
 import {Component, ElementRef} from '@angular/core';
 
+import { L } from 'leaflet';
 import 'leaflet-map';
 
 @Component({

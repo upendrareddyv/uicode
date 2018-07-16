@@ -1,12 +1,12 @@
-import { Component, ViewChild, Input, Output, EventEmitter, ElementRef, Renderer } from '@angular/core';
-import { NgUploaderOptions } from 'ngx-uploader';
+import { Component, ElementRef, EventEmitter, Input, Output, Renderer, ViewChild } from '@angular/core';
+
 @Component({
   selector: 'ba-file-uploader',
   styleUrls: ['./baFileUploader.scss'],
   templateUrl: './baFileUploader.html',
 })
 export class BaFileUploader {
-  @Input() fileUploaderOptions: NgUploaderOptions = { url: '' };
+  @Input() fileUploaderOptions = {url: ''};
   @Output() onFileUpload = new EventEmitter<any>();
   @Output() onFileUploadCompleted = new EventEmitter<any>();
   @Input() defaultValue: string = '';
@@ -15,7 +15,8 @@ export class BaFileUploader {
   @ViewChild('inputText') public _inputText: ElementRef;
 
   public uploadFileInProgress: boolean;
-  constructor(private renderer: Renderer) { 
+
+  constructor(private renderer: Renderer) {
   }
 
   bringFileSelector(): boolean {

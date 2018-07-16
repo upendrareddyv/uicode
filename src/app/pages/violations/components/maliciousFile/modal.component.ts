@@ -6,7 +6,10 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'add-service-modal',
-  styleUrls: [('./default-modal.component.scss'), ('./chartistJs.scss')],
+  styleUrls: [
+    'default-modal.component.scss',
+    './chartistJs.scss'
+  ],
   templateUrl: './default-modal.component.html'
 })
 
