@@ -1,10 +1,11 @@
-import {Injectable} from '@angular/core';
-import {BaThemeConfigProvider, layoutPaths} from '../../../../theme';
+import { Injectable } from '@angular/core';
+import { BaThemeConfigProvider, layoutPaths } from '../../../../theme';
+import { AmCharts } from 'amcharts3';
 
 @Injectable()
 export class BubbleMapsService {
 
-  constructor(private _baConfig:BaThemeConfigProvider) {
+  constructor(private _baConfig: BaThemeConfigProvider) {
   }
 
   getData() {
@@ -460,7 +461,6 @@ export class BubbleMapsService {
       }
       let size = Math.sqrt(square / (Math.PI * 2));
       let id = dataItem.code;
-
 
 
       dataProvider.images.push({

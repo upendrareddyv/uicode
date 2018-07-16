@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
 import { UserProfile } from './userProfile';
 
 @Component({
-  moduleId: module.id,
+  moduleId: '123', //module.id
   selector: 'user-profile',
   templateUrl: './userProfile.html',
 })

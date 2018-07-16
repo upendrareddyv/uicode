@@ -1,11 +1,10 @@
 /**
  * Created by kjhaveri on 6/7/2017.
  */
-import {Injectable} from '@angular/core';
-import { Http, Response } from '@angular/http';
-import {BaThemeConfigProvider} from '../../../../theme';
+import { Injectable } from '@angular/core';
+import { BaThemeConfigProvider } from '../../../../theme';
 import 'rxjs/add/operator/map';
-
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable()
@@ -32,7 +31,7 @@ export class LateralMovementDataService {
           }
         },
         "simpleLineData": {
-          labels: ['May 1','May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
+          labels: ['May 1', 'May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
           series: [
             [0.1, 0.2333, 0.37444, 0.29, 0.33, 0.41, 0.26, 0.44],
             [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
@@ -40,13 +39,13 @@ export class LateralMovementDataService {
           ]
         }
       },
-      "employee_id" : "16368",
-      "first_name" : "Average",
-      "last_name" : "Joe",
-      "manager" : "Above Average Joe",
-      "work_email" : "average@joe.com",
-      "department" : "Database & Middleware",
-      "Title" : "Lead Database Administrtator",
+      "employee_id": "16368",
+      "first_name": "Average",
+      "last_name": "Joe",
+      "manager": "Above Average Joe",
+      "work_email": "average@joe.com",
+      "department": "Database & Middleware",
+      "Title": "Lead Database Administrtator",
 
     },
     {
@@ -69,7 +68,7 @@ export class LateralMovementDataService {
           }
         },
         "simpleLineData": {
-          labels: ['May 1','May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
+          labels: ['May 1', 'May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
           series: [
             [0.1, 0.2333, 0.37444, 0.29, 0.33, 0.41, 0.26, 0.44],
             [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
@@ -77,13 +76,13 @@ export class LateralMovementDataService {
           ]
         }
       },
-      "employee_id" : "16368",
-      "first_name" : "Average",
-      "last_name" : "Joe",
-      "manager" : "Above Average Joe",
-      "work_email" : "average@joe.com",
-      "department" : "Database & Middleware",
-      "Title" : "Lead Database Administrtator",
+      "employee_id": "16368",
+      "first_name": "Average",
+      "last_name": "Joe",
+      "manager": "Above Average Joe",
+      "work_email": "average@joe.com",
+      "department": "Database & Middleware",
+      "Title": "Lead Database Administrtator",
     },
     {
       "account_name": "averagejoe",
@@ -105,7 +104,7 @@ export class LateralMovementDataService {
           }
         },
         "simpleLineData": {
-          labels: ['May 1','May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
+          labels: ['May 1', 'May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
           series: [
             [0.1, 0.2333, 0.37444, 0.29, 0.33, 0.41, 0.26, 0.44],
             [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
@@ -113,13 +112,13 @@ export class LateralMovementDataService {
           ]
         }
       },
-      "employee_id" : "16368",
-      "first_name" : "Average",
-      "last_name" : "Joe",
-      "manager" : "Above Average Joe",
-      "work_email" : "average@joe.com",
-      "department" : "Database & Middleware",
-      "Title" : "Lead Database Administrtator",
+      "employee_id": "16368",
+      "first_name": "Average",
+      "last_name": "Joe",
+      "manager": "Above Average Joe",
+      "work_email": "average@joe.com",
+      "department": "Database & Middleware",
+      "Title": "Lead Database Administrtator",
     },
     {
       "account_name": "admrananth",
@@ -141,7 +140,7 @@ export class LateralMovementDataService {
           }
         },
         "simpleLineData": {
-          labels: ['May 1','May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
+          labels: ['May 1', 'May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
           series: [
             [0.1, 0.2333, 0.37444, 0.4555, 0.42, 0.36, 0.42, 0.27],
             [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
@@ -149,13 +148,13 @@ export class LateralMovementDataService {
           ]
         }
       },
-      "employee_id" : "16368",
-      "first_name" : "Average",
-      "last_name" : "Joe",
-      "manager" : "Above Average Joe",
-      "work_email" : "average@joe.com",
-      "department" : "Database & Middleware",
-      "Title" : "Lead Database Administrtator",
+      "employee_id": "16368",
+      "first_name": "Average",
+      "last_name": "Joe",
+      "manager": "Above Average Joe",
+      "work_email": "average@joe.com",
+      "department": "Database & Middleware",
+      "Title": "Lead Database Administrtator",
     },
     {
       "account_name": "ffajardo",
@@ -177,7 +176,7 @@ export class LateralMovementDataService {
           }
         },
         "simpleLineData": {
-          labels: ['May 1','May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
+          labels: ['May 1', 'May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
           series: [
             [0.1, 0.2333, 0.37444, 0.29, 0.33, 0.41, 0.26, 0.44],
             [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
@@ -185,13 +184,13 @@ export class LateralMovementDataService {
           ]
         }
       },
-      "employee_id" : "16368",
-      "first_name" : "Average",
-      "last_name" : "Joe",
-      "manager" : "Above Average Joe",
-      "work_email" : "average@joe.com",
-      "department" : "Database & Middleware",
-      "Title" : "Lead Database Administrtator",
+      "employee_id": "16368",
+      "first_name": "Average",
+      "last_name": "Joe",
+      "manager": "Above Average Joe",
+      "work_email": "average@joe.com",
+      "department": "Database & Middleware",
+      "Title": "Lead Database Administrtator",
     },
     {
       "account_name": "admrananth",
@@ -213,7 +212,7 @@ export class LateralMovementDataService {
           }
         },
         "simpleLineData": {
-          labels: ['May 1','May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
+          labels: ['May 1', 'May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
           series: [
             [0.1, 0.2333, 0.37444, 0.4555, 0.42, 0.36, 0.42, 0.27],
             [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
@@ -221,13 +220,13 @@ export class LateralMovementDataService {
           ]
         }
       },
-      "employee_id" : "16368",
-      "first_name" : "Average",
-      "last_name" : "Joe",
-      "manager" : "Above Average Joe",
-      "work_email" : "average@joe.com",
-      "department" : "Database & Middleware",
-      "Title" : "Lead Database Administrtator",
+      "employee_id": "16368",
+      "first_name": "Average",
+      "last_name": "Joe",
+      "manager": "Above Average Joe",
+      "work_email": "average@joe.com",
+      "department": "Database & Middleware",
+      "Title": "Lead Database Administrtator",
     },
     {
       "account_name": "admrananth",
@@ -249,7 +248,7 @@ export class LateralMovementDataService {
           }
         },
         "simpleLineData": {
-          labels: ['May 1','May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
+          labels: ['May 1', 'May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
           series: [
             [0.1, 0.2333, 0.37444, 0.4555, 0.42, 0.36, 0.42, 0.27],
             [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
@@ -257,13 +256,13 @@ export class LateralMovementDataService {
           ]
         }
       },
-      "employee_id" : "16368",
-      "first_name" : "Average",
-      "last_name" : "Joe",
-      "manager" : "Above Average Joe",
-      "work_email" : "average@joe.com",
-      "department" : "Database & Middleware",
-      "Title" : "Lead Database Administrtator",
+      "employee_id": "16368",
+      "first_name": "Average",
+      "last_name": "Joe",
+      "manager": "Above Average Joe",
+      "work_email": "average@joe.com",
+      "department": "Database & Middleware",
+      "Title": "Lead Database Administrtator",
     },
     {
       "account_name": "admlotam",
@@ -285,7 +284,7 @@ export class LateralMovementDataService {
           }
         },
         "simpleLineData": {
-          labels: ['May 1','May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
+          labels: ['May 1', 'May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
           series: [
             [0.1, 0.2333, 0.37444, 0.4555, 0.42, 0.36, 0.42, 0.27],
             [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
@@ -293,13 +292,13 @@ export class LateralMovementDataService {
           ]
         }
       },
-      "employee_id" : "16368",
-      "first_name" : "Average",
-      "last_name" : "Joe",
-      "manager" : "Above Average Joe",
-      "work_email" : "average@joe.com",
-      "department" : "Database & Middleware",
-      "Title" : "Lead Database Administrtator",
+      "employee_id": "16368",
+      "first_name": "Average",
+      "last_name": "Joe",
+      "manager": "Above Average Joe",
+      "work_email": "average@joe.com",
+      "department": "Database & Middleware",
+      "Title": "Lead Database Administrtator",
     },
     {
       "account_name": "admlotam",
@@ -321,7 +320,7 @@ export class LateralMovementDataService {
           }
         },
         "simpleLineData": {
-          labels: ['May 1','May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
+          labels: ['May 1', 'May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
           series: [
             [0.1, 0.2333, 0.37444, 0.4555, 0.42, 0.36, 0.42, 0.27],
             [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
@@ -329,13 +328,13 @@ export class LateralMovementDataService {
           ]
         }
       },
-      "employee_id" : "16368",
-      "first_name" : "Average",
-      "last_name" : "Joe",
-      "manager" : "Above Average Joe",
-      "work_email" : "average@joe.com",
-      "department" : "Database & Middleware",
-      "Title" : "Lead Database Administrtator",
+      "employee_id": "16368",
+      "first_name": "Average",
+      "last_name": "Joe",
+      "manager": "Above Average Joe",
+      "work_email": "average@joe.com",
+      "department": "Database & Middleware",
+      "Title": "Lead Database Administrtator",
     },
     {
       "account_name": "admrananth",
@@ -357,7 +356,7 @@ export class LateralMovementDataService {
           }
         },
         "simpleLineData": {
-          labels: ['May 1','May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
+          labels: ['May 1', 'May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
           series: [
             [0.1, 0.2333, 0.37444, 0.4555, 0.42, 0.36, 0.42, 0.27],
             [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
@@ -365,13 +364,13 @@ export class LateralMovementDataService {
           ]
         }
       },
-      "employee_id" : "16368",
-      "first_name" : "Average",
-      "last_name" : "Joe",
-      "manager" : "Above Average Joe",
-      "work_email" : "average@joe.com",
-      "department" : "Database & Middleware",
-      "Title" : "Lead Database Administrtator",
+      "employee_id": "16368",
+      "first_name": "Average",
+      "last_name": "Joe",
+      "manager": "Above Average Joe",
+      "work_email": "average@joe.com",
+      "department": "Database & Middleware",
+      "Title": "Lead Database Administrtator",
     },
     {
       "account_name": "admrananth",
@@ -393,7 +392,7 @@ export class LateralMovementDataService {
           }
         },
         "simpleLineData": {
-          labels: ['May 1','May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
+          labels: ['May 1', 'May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
           series: [
             [0.1, 0.2333, 0.37444, 0.4555, 0.42, 0.36, 0.42, 0.27],
             [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
@@ -401,13 +400,13 @@ export class LateralMovementDataService {
           ]
         }
       },
-      "employee_id" : "16368",
-      "first_name" : "Average",
-      "last_name" : "Joe",
-      "manager" : "Above Average Joe",
-      "work_email" : "average@joe.com",
-      "department" : "Database & Middleware",
-      "Title" : "Lead Database Administrtator",
+      "employee_id": "16368",
+      "first_name": "Average",
+      "last_name": "Joe",
+      "manager": "Above Average Joe",
+      "work_email": "average@joe.com",
+      "department": "Database & Middleware",
+      "Title": "Lead Database Administrtator",
     },
     {
       "account_name": "admlotam",
@@ -429,7 +428,7 @@ export class LateralMovementDataService {
           }
         },
         "simpleLineData": {
-          labels: ['May 1','May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
+          labels: ['May 1', 'May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
           series: [
             [0.1, 0.2333, 0.37444, 0.4555, 0.42, 0.36, 0.42, 0.27],
             [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
@@ -437,13 +436,13 @@ export class LateralMovementDataService {
           ]
         }
       },
-      "employee_id" : "16368",
-      "first_name" : "Average",
-      "last_name" : "Joe",
-      "manager" : "Above Average Joe",
-      "work_email" : "average@joe.com",
-      "department" : "Database & Middleware",
-      "Title" : "Lead Database Administrtator",
+      "employee_id": "16368",
+      "first_name": "Average",
+      "last_name": "Joe",
+      "manager": "Above Average Joe",
+      "work_email": "average@joe.com",
+      "department": "Database & Middleware",
+      "Title": "Lead Database Administrtator",
     },
     {
       "account_name": "admrananth",
@@ -465,7 +464,7 @@ export class LateralMovementDataService {
           }
         },
         "simpleLineData": {
-          labels: ['May 1','May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
+          labels: ['May 1', 'May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
           series: [
             [0.1, 0.2333, 0.37444, 0.4555, 0.42, 0.36, 0.42, 0.27],
             [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
@@ -473,13 +472,13 @@ export class LateralMovementDataService {
           ]
         }
       },
-      "employee_id" : "16368",
-      "first_name" : "Average",
-      "last_name" : "Joe",
-      "manager" : "Above Average Joe",
-      "work_email" : "average@joe.com",
-      "department" : "Database & Middleware",
-      "Title" : "Lead Database Administrtator",
+      "employee_id": "16368",
+      "first_name": "Average",
+      "last_name": "Joe",
+      "manager": "Above Average Joe",
+      "work_email": "average@joe.com",
+      "department": "Database & Middleware",
+      "Title": "Lead Database Administrtator",
     },
     {
       "account_name": "admrananth",
@@ -501,7 +500,7 @@ export class LateralMovementDataService {
           }
         },
         "simpleLineData": {
-          labels: ['May 1','May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
+          labels: ['May 1', 'May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
           series: [
             [0.1, 0.2333, 0.37444, 0.4555, 0.42, 0.36, 0.42, 0.27],
             [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
@@ -509,13 +508,13 @@ export class LateralMovementDataService {
           ]
         }
       },
-      "employee_id" : "16368",
-      "first_name" : "Average",
-      "last_name" : "Joe",
-      "manager" : "Above Average Joe",
-      "work_email" : "average@joe.com",
-      "department" : "Database & Middleware",
-      "Title" : "Lead Database Administrtator",
+      "employee_id": "16368",
+      "first_name": "Average",
+      "last_name": "Joe",
+      "manager": "Above Average Joe",
+      "work_email": "average@joe.com",
+      "department": "Database & Middleware",
+      "Title": "Lead Database Administrtator",
     },
     {
       "account_name": "admjhammock",
@@ -537,7 +536,7 @@ export class LateralMovementDataService {
           }
         },
         "simpleLineData": {
-          labels: ['May 1','May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
+          labels: ['May 1', 'May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
           series: [
             [0.44, 0.333, 0.37444, 0.4555, 0.52, 0.67, 0.72, 0.84],
             [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
@@ -545,13 +544,13 @@ export class LateralMovementDataService {
           ]
         }
       },
-      "employee_id" : "16368",
-      "first_name" : "Average",
-      "last_name" : "Joe",
-      "manager" : "Above Average Joe",
-      "work_email" : "average@joe.com",
-      "department" : "Database & Middleware",
-      "Title" : "Lead Database Administrtator",
+      "employee_id": "16368",
+      "first_name": "Average",
+      "last_name": "Joe",
+      "manager": "Above Average Joe",
+      "work_email": "average@joe.com",
+      "department": "Database & Middleware",
+      "Title": "Lead Database Administrtator",
     },
     {
       "account_name": "admlotam",
@@ -573,7 +572,7 @@ export class LateralMovementDataService {
           }
         },
         "simpleLineData": {
-          labels: ['May 1','May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
+          labels: ['May 1', 'May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
           series: [
             [0.1, 0.2333, 0.37444, 0.4555, 0.42, 0.36, 0.42, 0.27],
             [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
@@ -581,13 +580,13 @@ export class LateralMovementDataService {
           ]
         }
       },
-      "employee_id" : "16368",
-      "first_name" : "Average",
-      "last_name" : "Joe",
-      "manager" : "Above Average Joe",
-      "work_email" : "average@joe.com",
-      "department" : "Database & Middleware",
-      "Title" : "Lead Database Administrtator",
+      "employee_id": "16368",
+      "first_name": "Average",
+      "last_name": "Joe",
+      "manager": "Above Average Joe",
+      "work_email": "average@joe.com",
+      "department": "Database & Middleware",
+      "Title": "Lead Database Administrtator",
     },
     {
       "account_name": "admangchakr",
@@ -609,7 +608,7 @@ export class LateralMovementDataService {
           }
         },
         "simpleLineData": {
-          labels: ['May 1','May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
+          labels: ['May 1', 'May 5', 'May 10', 'May 15', 'May 20', 'May 25', 'May 30'],
           series: [
             [0.19, 0.2333, 0.37444, 0.4555, 0.52, 0.67, 0.72, 0.97],
             [0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3],
@@ -617,26 +616,20 @@ export class LateralMovementDataService {
           ]
         }
       },
-      "employee_id" : "16368",
-      "first_name" : "Average",
-      "last_name" : "Joe",
-      "manager" : "Above Average Joe",
-      "work_email" : "average@joe.com",
-      "department" : "Database & Middleware",
-      "Title" : "Lead Database Administrtator",
+      "employee_id": "16368",
+      "first_name": "Average",
+      "last_name": "Joe",
+      "manager": "Above Average Joe",
+      "work_email": "average@joe.com",
+      "department": "Database & Middleware",
+      "Title": "Lead Database Administrtator",
     }
 
   ]
 
 
-
-
-
-
-
-
-
-  constructor(private http: Http, private _baConfig:BaThemeConfigProvider) { }
+  constructor(private http: HttpClient, private _baConfig: BaThemeConfigProvider) {
+  }
 
 
   getData(): Promise<any> {
@@ -648,10 +641,10 @@ export class LateralMovementDataService {
   }
 
 
-/*  getData() {
-    return this.http
-      .get('api/userProfile.json')
-      .map((response: Response) => response.json().data);
-  }*/
+  /*  getData() {
+      return this.http
+        .get('api/userProfile.json')
+        .map((response: Response) => response.json().data);
+    }*/
 
 }

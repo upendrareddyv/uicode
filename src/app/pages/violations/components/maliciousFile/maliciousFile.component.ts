@@ -2,12 +2,11 @@
  * Created by kjhaveri on 6/6/2017.
  */
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 import { MaliciousFileService } from './maliciousFile.service'
 import { UserProfile } from './userProfile';
 import { DefaultModal } from './modal.component';
-import { search } from './userEvents-filter.pipe'
 
 @Component({
   selector: 'maliciousFile',

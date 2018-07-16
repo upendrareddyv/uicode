@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import * as Handsontable from 'handsontable/dist/handsontable.full.js';
 import { getScienceData } from './data';
-import { updateHeatmap } from './science-demo.service';
-import { point } from './science-demo.service';
-import { generateHeatmapData } from './science-demo.service';
+import { point, updateHeatmap } from './science-demo.service';
+import { chroma } from "chroma-js";
 
 let heatmapScale = chroma.scale(['#17F556', '#ED6D47']);
 let heatmap = [];
@@ -23,8 +22,8 @@ function heatmapRenderer(instance, td, row, col, prop, value, cellProperties) {
   templateUrl: './science-demo.html'
 })
 export class ScienceDemoComponent {
-   data:Array<any>;
-   options:any;
+  data: Array<any>;
+  options: any;
 
   constructor() {
     this.data = getScienceData();

@@ -1,9 +1,9 @@
 /**
  * Created by kjhaveri on 6/7/2017.
  */
-import {Injectable} from '@angular/core';
-import {Http, Response} from '@angular/http';
-import {BaThemeConfigProvider} from '../../../../theme';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { BaThemeConfigProvider } from '../../../../theme';
 import 'rxjs/add/operator/map';
 
 
@@ -5904,7 +5904,7 @@ export class BotnetService {
     }]
 
 
-  constructor(private http: Http, private _baConfig: BaThemeConfigProvider) {
+  constructor(private http: HttpClient, private _baConfig: BaThemeConfigProvider) {
   }
 
 
