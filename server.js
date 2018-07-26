@@ -1,4 +1,5 @@
 // Get dependencies
+require('rootpath')();
 const express = require('express');
 const path = require('path');
 const http = require('http');
@@ -12,6 +13,9 @@ const app = express();
 // Parsers for POST data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+var mongojs = require("mongojs"),
+    config = require('config.json'),
+    db = mongojs(config.connectionString);
 
 // Point static path to dist
 app.use(express.static(path.join(__dirname, 'dist')));
