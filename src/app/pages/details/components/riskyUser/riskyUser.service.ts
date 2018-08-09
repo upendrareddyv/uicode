@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { BaThemeConfigProvider, colorHelper } from '../../../../theme';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class RiskyUserService {
-    constructor(private _baConfig: BaThemeConfigProvider) {}
+    constructor(private http: HttpClient) {}
 
     getData() {
         return [
@@ -34,5 +34,9 @@ export class RiskyUserService {
                 icon: 'user'
             }
         ];
+    }
+    getUploadExceedData() {
+        const url = '/api/users_uploading_excess_data';
+        return this.http.get(url);
     }
 }

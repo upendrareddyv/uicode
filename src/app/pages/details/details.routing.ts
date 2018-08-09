@@ -1,4 +1,4 @@
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { Details } from './details.component';
 import { RiskyUser } from './components/riskyUser/riskyUser.component';
@@ -12,7 +12,11 @@ const routes: Routes = [
         component: Details,
         children: [
             {
-                path: 'riskyUser',
+                path: 'riskyUser/all',
+                component: RiskyUser
+            },
+            {
+                path: 'riskyUser/:selectedUser',
                 component: RiskyUser
             },
             {

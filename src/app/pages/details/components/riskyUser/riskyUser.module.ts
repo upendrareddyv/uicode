@@ -1,19 +1,18 @@
-import { NgModule }      from '@angular/core';
-import { CommonModule }  from '@angular/common';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { NgaModule } from '../../../../theme/nga.module';
 
 import { RiskyUser } from './riskyUser.component';
-import { routing }       from './riskyUser.routing';
 
 
 @NgModule({
     imports: [
         CommonModule,
-        NgaModule,
-        routing
+        NgaModule
     ],
     declarations: [
         RiskyUser
     ]
 })
-export class RiskyUserModule {}
+export class RiskyUserModule {
+}

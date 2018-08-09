@@ -3,15 +3,15 @@
         <div *ngFor="let user of riskUsersList">
             <div class="row user-item p-xs">
                 <div class="col-sm-2 col-md-2">
-                    <img src='../../../../assets/images/{{user.icon}}.png' />
+                    <img src='../../../../assets/images/user.png' />
                 </div>
                 <div class="col-sm-7 col-md-7 user-info" >
-                    <h3><a routerLink="/pages/details/riskyUser">{{user.name}}</a></h3>
-                    <span>{{user.department}}</span>
+                    <h3><a [routerLink]="['/pages/details/riskyUser', user._id]">{{user._id}}</a></h3>
+                    <!--<span>{{user.department}}</span>-->
                 </div>
                 <div class="col-sm-3 col-md-3 risk-count-cont">
-                    <span class="risk-count">{{user.riskScore}}</span>
-                    <span class="text-label">Risk Score</span>
+                    <span class="risk-count">{{user.llamadas}}</span>
+                    <!--<span class="text-label">Risk Score</span>-->
                 </div>
             </div>
         </div>

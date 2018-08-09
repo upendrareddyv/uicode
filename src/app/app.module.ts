@@ -18,42 +18,42 @@ import { HttpClientModule } from '@angular/common/http';
 
 // Application wide providers
 const APP_PROVIDERS = [
-  AppState,
-  GlobalState
+    AppState,
+    GlobalState
 ];
 
 export type StoreType = {
-  state: InternalStateType,
-  restoreInputValues: () => void,
-  disposeOldHosts: () => void
+    state: InternalStateType,
+    restoreInputValues: () => void,
+    disposeOldHosts: () => void
 };
 
 /**
  * `AppModule` is the main entry point into Angular2's bootstraping process
  */
 @NgModule({
-  bootstrap: [App],
-  declarations: [
-    App
-  ],
-  imports: [ // import Angular's modules
-    BrowserModule,
-    HttpClientModule,
-    RouterModule,
-    FormsModule,
-    ReactiveFormsModule,
-    NgaModule.forRoot(),
-    NgbModule.forRoot(),
-    PagesModule,
-    routing
-  ],
-  providers: [ // expose our Services and Providers into Angular's dependency injection
-    APP_PROVIDERS
-  ]
+    bootstrap: [App],
+    declarations: [
+        App
+    ],
+    imports: [ // import Angular's modules
+        BrowserModule,
+        HttpClientModule,
+        RouterModule,
+        FormsModule,
+        ReactiveFormsModule,
+        NgaModule.forRoot(),
+        NgbModule.forRoot(),
+        PagesModule,
+        routing
+    ],
+    providers: [ // expose our Services and Providers into Angular's dependency injection
+        APP_PROVIDERS
+    ]
 })
 
 export class AppModule {
 
-  constructor(public appState: AppState) {
-  }
+    constructor(public appState: AppState) {
+    }
 }

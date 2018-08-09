@@ -10,8 +10,8 @@ import { PAGES_MENU } from './pages.menu';
 })
 
 export class Pages {
-    constructor(private _menuService: BaMenuService, private _router:Router) {
-        console.log(this._router);
+    constructor(private _menuService: BaMenuService, private _router: Router) {
+        // console.log(this._router);
     }
 
     ngOnInit() {
