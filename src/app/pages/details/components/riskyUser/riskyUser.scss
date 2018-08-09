@@ -84,3 +84,70 @@
         margin-top: 0;
     }
 }
+.risky-users-info {
+    .risky-user {
+        margin-bottom: 10px;
+        .header {
+            background-color: $mnrl-gray-30;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            color: #000;
+            line-height: 2.0;
+        }
+        .details-list {
+            background-color: #fff;
+            color: #000;
+            line-height: 1.5;
+            padding: 10px;
+            border-radius: 0 0 5px 5px;
+            .list-item {
+                margin-bottom: 20px;
+                .item-header {
+                    background-color: $mnrl-red-10;
+                    padding: 10px 0;
+                    border-radius: 5px;
+                    margin: 0 0 10px 0;
+                    font-weight: bold;
+                }
+                .item-info {
+                    padding: 10px;
+                }
+                .risk-score {
+                    padding: 5px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .days-info {
+        background-color: $mnrl-red-40;
+        padding: 5px 10px;
+        border-radius: 5px;
+        min-width: 110px;
+        margin-right: 10px;
+        display: inline-block;
+        text-align: center;
+    }
+}
+.all-users-info {
+    width: 50%;
+    .row {
+        margin: 0px;
+        border-bottom: 1px solid #CCCCCC;
+        &:last-child {
+            border-bottom: none;
+        }
+        .col {
+            padding: 10px;
+            border-right: 1px solid #CCCCCC;
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+    .table-header {
+        background-color: #FFFFFF;
+        color: #000000;
+        font-weight: bold;
+    }
+}

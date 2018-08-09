@@ -1,14 +1,96 @@
-<div class="row pie-charts">
-    <ba-card *ngFor="let chart of charts" class="pie-chart-item-container col-xlg-3 col-lg-3 col-md-6 col-sm-12 col-12">
-        <div class="pie-chart-item">
-            <div class="chart" [attr.data-rel]="chart.color" data-percent="60">
-                <span class="percent"></span>
+<ng-container *ngIf="selectedUser">
+    <div class="risky-users-info">
+        <div class="risky-user">
+            <div class="header">
+                <div class="row">
+                    <div class="col col-md-3"><strong>Employee Id: </strong>675679</div>
+                    <div class="col col-md-3"><strong>Employee Name: </strong>Mark Johnson</div>
+                    <div class="col col-md-3"><strong>Employee UserID: </strong>MJohnson</div>
+                    <div class="col col-md-3"><strong>Department: </strong>Infrastructure Operations</div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-3"><strong>Manager Name: </strong>Ron Conway</div>
+                    <div class="col col-md-3"><strong>Manager Employee ID: </strong>78679</div>
+                    <div class="col col-md-3"><strong>Manager UserId: </strong>Roconwy</div>
+                </div>
             </div>
-            <div class="description">
-                <div translate>{{ chart.description }}</div>
-                <div class="description-stats">{{ chart.stats }}</div>
+            <div class="details-list">
+                <div class="list-item">
+                    <div class="item-header row">
+                        <div class="col-md-8">
+                            <span class="days-info">10 Days Back</span> Potential Account Misuse</div>
+                        <div class="col-md-4 risk-score">Risk Score: 0.2</div>
+                    </div>
+                    <div class="item-info">
+                        Detect an excessive number of requests on selected categories of websites. This indicates unusual request behavior on different categories of websites (#4 from above list)
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="item-header row">
+                        <div class="col-md-8">
+                            <span class="days-info">6 Days Back</span> Potential Data Aggregation</div>
+                        <div class="col-md-4 risk-score">Risk Score: 0.4</div>
+                    </div>
+                    <div class="item-info">
+                        Detect users who download an excessive amount of data from file sharing sites. This indicates possible data theft. (#5 from above list)
+                    </div>
+                </div>
             </div>
-            <i class="chart-icon i-{{ chart.icon }}"></i>
         </div>
-    </ba-card>
-</div>
+        <div class="risky-user">
+            <div class="header">
+                <div class="row">
+                    <div class="col col-md-3"><strong>Employee Id: </strong>675679</div>
+                    <div class="col col-md-3"><strong>Employee Name: </strong>Mark Johnson</div>
+                    <div class="col col-md-3"><strong>Employee UserID: </strong>MJohnson</div>
+                    <div class="col col-md-3"><strong>Department: </strong>Infrastructure Operations</div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-3"><strong>Manager Name: </strong>Ron Conway</div>
+                    <div class="col col-md-3"><strong>Manager Employee ID: </strong>78679</div>
+                    <div class="col col-md-3"><strong>Manager UserId: </strong>Roconwy</div>
+                </div>
+            </div>
+            <div class="details-list">
+                <div class="list-item">
+                    <div class="item-header row">
+                        <div class="col-md-8">
+                            <span class="days-info">10 Days Back</span> Potential Account Misuse</div>
+                        <div class="col-md-4 risk-score">Risk Score: 0.2</div>
+                    </div>
+                    <div class="item-info">
+                        Detect an excessive number of requests on selected categories of websites. This indicates unusual request behavior on different categories of websites (#4 from above list)
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="item-header row">
+                        <div class="col-md-8">
+                            <span class="days-info">6 Days Back</span> Potential Data Aggregation</div>
+                        <div class="col-md-4 risk-score">Risk Score: 0.4</div>
+                    </div>
+                    <div class="item-info">
+                        Detect users who download an excessive amount of data from file sharing sites. This indicates possible data theft. (#5 from above list)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="selectedUser === null">
+    <div class="all-users-info table table-bordered">
+        <div class="row table-header">
+            <div class="col text-center col-md-1">
+                S.No
+            </div>
+            <div class="col text-center col-md-6">
+                User Info
+            </div>
+            <div class="col text-center col-md-5">Bytes</div>
+        </div>
+        <div class="row" *ngFor="let user of allUsers; let i = index">
+            <div class="col col-md-1">{{i + 1}}</div>
+            <div class="col col-md-6">{{user._id}}</div>
+            <div class="col col-md-5">{{user.llamadas}}</div>
+        </div>
+    </div>
+</ng-container>

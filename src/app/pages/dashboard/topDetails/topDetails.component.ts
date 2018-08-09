@@ -9,15 +9,15 @@ import 'easy-pie-chart/dist/jquery.easypiechart.js';
 })
 
 export class TopDetails {
+    riskUsersList;
+    threatsList;
+    violationsList;
 
-    public riskUsersList: Array < Object > ;
-    public threatsList: Array < Object > ;
-    public violationsList: Array < Object > ;
     private _init = false;
     @Input() componentType: string;
 
     constructor(private _topDetailsService: TopDetailsService) {
-        this.riskUsersList = this._topDetailsService.getRiskyUsers();
+        // this.riskUsersList = this._topDetailsService.getRiskyUsers();
         this.threatsList = this._topDetailsService.getTopThreats();
         this.violationsList = this._topDetailsService.getTopViolations();
     }
@@ -26,5 +26,14 @@ export class TopDetails {
         if (!this._init) {
             this._init = true;
         }
+        if (this.componentType === 'riskyUser') {
+            this.getRiskyUser();
+        }
+    }
+
+    getRiskyUser() {
+        this._topDetailsService.getUploadExceedData().subscribe((res: any) => {
+            this.riskUsersList = res.data;
+        });
     }
 }
