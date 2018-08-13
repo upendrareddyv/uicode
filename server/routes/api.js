@@ -41,5 +41,24 @@ router.get('/users_uploading_excess_data', function (req, res, next) {
         });
     });
 });
+router.get('/get_Userdata_by_Source', function (req, res, next) {
+    var sourceId=req.query.source;
+    db.collection('users_uploading_excess_data').find({source: sourceId }, function (error, data) {
+      if(data.length == 0 || error ){
+        res.json([]);
+      }
+      else{
+      db.collection('hr_data').find({UserId:data[0].userID}, function (error1, data1) {
+          if (error1) {
+                res.json([]);
+
+            } else {
+                res.json({status: true,userDetails:data1});
+            }
+        
+    });
+     } 
+    });
+});
 
 module.exports = router;
