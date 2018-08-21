@@ -5,10 +5,12 @@ var express = require('express'),
     config = require('config.json'),
     db = mongojs(config.connectionString);
 
+var authenticate = require('../../middlewares/validateRequest');
+
 router.get('/', (req, res) => {
     res.send('api works')
 });
-router.get('/users_uploading_excess_data', function (req, res, next) {
+router.get('/users_uploading_excess_data', authenticate,function (req, res, next) {
     var records = queryParams.getLimit(),
         page = queryParams.getOffset();
 
@@ -41,7 +43,7 @@ router.get('/users_uploading_excess_data', function (req, res, next) {
         });
     });
 });
-router.get('/get_Userdata_by_Source', function (req, res, next) {
+router.get('/get_Userdata_by_Source', authenticate,function (req, res, next) {
     var sourceId=req.query.source;
     db.collection('users_uploading_excess_data').find({source: sourceId }, function (error, data) {
       if(data.length == 0 || error ){
@@ -53,7 +55,7 @@ router.get('/get_Userdata_by_Source', function (req, res, next) {
                 res.json([]);
 
             } else {
-                res.json({status: true,userDetails:data1});
+                res.json({status: true,userDetails:data1,sourceData:data});
             }
         
     });

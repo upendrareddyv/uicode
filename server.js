@@ -6,6 +6,7 @@ const http = require('http');
 const paginationParams = require('./server/common/middleware');
 // Get our API routes
 const api = require('./server/routes/api');
+const auth = require('./server/routes/auth');
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(paginationParams);
 
 // Set our api routes
 app.use('/api', api);
+app.use('/auth',auth);
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
