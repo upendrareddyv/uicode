@@ -14,9 +14,15 @@ export class RiskyUser implements OnInit{
     charts: Array<Object>;
     private init = false;
     private selectedUser: string = null;
-    private allUsers: any;
+    private selectedUserDetails: any = {};
+    private allUsers: any = [];
+    private offset: number = 0;
+    private totalRecords: number = 0;
+    private recordsReturned: number = 0;
 
     constructor(private riskyUserService: RiskyUserService, private routeParam: ActivatedRoute) {
+        this.offset = 0;
+        this.recordsReturned = 0;
     }
 
     ngOnInit(): void {
@@ -25,54 +31,32 @@ export class RiskyUser implements OnInit{
             this.selectedUser = params.get('selectedUser');
         });
         if (this.selectedUser) {
-            console.log('Need to call the new API by passing the userID');
-            this.loadPieCharts();
-            this.updatePieCharts();
-        } else {
-            this.riskyUserService.getUploadExceedData().subscribe((res: any) => {
-                this.allUsers = res.data;
-                this.sortUsersOnSize();
+            this.riskyUserService.getSelectedUserData(this.selectedUser).subscribe( (res: any) => {
+                this.selectedUserDetails.userInfo = res.userDetails[0];
+                this.selectedUserDetails.data = res.sourceData;
             });
+        } else {
+            this.getAllUsers();
         }
+    }
+    getAllUsers() {
+        this.riskyUserService.getUploadExceedData(this.offset).subscribe((res: any) => {
+            this.totalRecords = res._totalRecords;
+            this.allUsers = this.allUsers.concat(res.data);
+            this.recordsReturned = this.allUsers.length;
+        });
     }
     sortUsersOnSize() {
         this.allUsers = this.allUsers.sort((a, b) => a.llamadas < b.llamadas ? 1 : -1);
-        console.log(this.allUsers);
     }
 
     ngAfterViewInit() {
         if (!this.init) {
-
             this.init = true;
         }
     }
-    private loadPieCharts() {
-
-        jQuery('.chart').each(function() {
-            let chart = jQuery(this);
-            chart.easyPieChart({
-                easing: 'easeOutBounce',
-                onStep: function(from, to, percent) {
-                    jQuery(this.el).find('.percent').text(Math.round(percent));
-                },
-                barColor: jQuery(this).attr('data-rel'),
-                trackColor: 'rgba(0,0,0,0)',
-                size: 100,
-                scaleLength: 0,
-                animation: 2000,
-                lineWidth: 9,
-                lineCap: 'round',
-            });
-        });
-    }
-
-    private updatePieCharts() {
-        let getRandomArbitrary = (min, max) => {
-            return Math.random() * (max - min) + min;
-        };
-
-        jQuery('.pie-charts .chart').each(function(index, chart) {
-            jQuery(chart).data('easyPieChart').update(getRandomArbitrary(55, 90));
-        });
+    loadMoreUsers() {
+        this.offset++;
+        this.getAllUsers();
     }
 }

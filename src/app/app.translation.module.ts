@@ -10,22 +10,22 @@ export function createTranslateLoader(http: HttpClient) {
 }
 
 const translationOptions = {
-  loader: {
-    provide: TranslateLoader,
-    useFactory: (createTranslateLoader),
-    deps: [HttpClient]
-  }
+    loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+    }
 };
 
 @NgModule({
-  imports: [TranslateModule.forRoot(translationOptions)],
-  exports: [TranslateModule],
-  providers: [TranslateService]
+    imports: [TranslateModule.forRoot(translationOptions)],
+    exports: [TranslateModule],
+    providers: [TranslateService]
 })
 export class AppTranslationModule {
-  constructor(private translate: TranslateService) {
-    translate.addLangs(["en"]);
-    translate.setDefaultLang('en');
-    translate.use('en');
-  }
+    constructor(private translate: TranslateService) {
+        translate.addLangs(["en"]);
+        translate.setDefaultLang('en');
+        translate.use('en');
+    }
 }

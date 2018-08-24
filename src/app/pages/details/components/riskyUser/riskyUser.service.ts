@@ -35,8 +35,13 @@ export class RiskyUserService {
             }
         ];
     }
-    getUploadExceedData() {
-        const url = '/api/users_uploading_excess_data';
+    getUploadExceedData(limit) {
+        const url = `/api/users_uploading_excess_data?records=20&page=${limit}`;
+        return this.http.get(url);
+    }
+    getSelectedUserData(sourceId) {
+        // sourceId = '112.5.243.48';
+        const url = `api/get_Userdata_by_Source?source=${sourceId}`;
         return this.http.get(url);
     }
 }
