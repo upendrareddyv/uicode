@@ -7,7 +7,7 @@
         border-radius: 55%;
     }
     .user-item {
-        margin: 0 0 15px 0;
+        margin: 0 0 18px 0;
         padding: 5px 0;
         .user-info {
             h3 {
@@ -68,6 +68,10 @@
                 }
             }
         }
+    }
+    .view-all-link {
+        margin: 0 20px ;
+        font-size: 18px;
     }
 
 	@media screen and (min-width: 1325px) {

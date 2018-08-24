@@ -1,5 +1,5 @@
 var DEFAULT_LIMIT = 25;
-var DEFAULT_OFFSET = 1;
+var DEFAULT_OFFSET = 0;
 module.exports = {
     limit: DEFAULT_LIMIT,
     offset: DEFAULT_OFFSET,

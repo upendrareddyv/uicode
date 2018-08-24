@@ -3,8 +3,11 @@ function paginationParams (req, res, next) {
     if (req.query.records) {
         queryParams.setLimit(parseInt(req.query.records));
     }
+    console.log(req.query.page);
     if (req.query.page) {
-        queryParams.setOffset(parseInt(req.query.page) - 1);
+        queryParams.setOffset(parseInt(req.query.page));
+    } else {
+        queryParams.setOffset(parseInt(0));
     }
     next();
 }

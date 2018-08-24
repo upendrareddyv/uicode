@@ -37,7 +37,7 @@ export class TopDetailsService {
     }
     getUploadExceedData() {
         let url = '/api/users_uploading_excess_data';
-        url += '?records=6';
+        url += '?records=5';
         return this.http.get(url);
     }
     getTopThreats() {
